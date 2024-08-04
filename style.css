@@ -1,3 +1,4 @@
+/* Add this to your style.css */
 body {
     font-family: "Outfit", sans-serif;
     margin: 0;
@@ -42,6 +43,15 @@ span {
     display: grid;
 }
 
+.navbar .nav-links i{
+    color: #26ffe3;
+    text-align: start;
+    position: absolute;
+    margin-left: -72px;
+    font-size: 60px;
+    display: block;
+}
+
 .navbar .nav-links a {
     border-top: 1px solid #4e4e4e;
     padding: 26px;
@@ -58,8 +68,18 @@ span {
 
 .navbar .nav-links .img {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
+.navbar .nav-links .img p{
+    margin: 0;
+    background-color: #12173a;
+    border: 1px solid #4e4e4e;
+    border-radius: 30px;
+    padding: 6px 20px;
+}
 .a6 {
     border-bottom: 1px solid #4e4e4e;
 }
@@ -142,9 +162,10 @@ span {
 
 .project-buttons{
     display: flex;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 20px;
+    margin-left: 20px;
+    margin-right:20px;
+    margin-top: 60px;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -154,16 +175,69 @@ span {
 }
 
 .project-buttons1 button{
-    padding: 12px 30px;
+    padding: 12px 35px;
     outline: none;
-    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    background-color: #0d1224;
     border: none;
     border-radius: 30px;
     color: #fff;
+    cursor: pointer;
+    border: 2px solid #4e4e4e;
+}
+
+.project-buttons1 button.selected {
+    border: 2px solid #26ffe3;
+    color: #fff;
+}
+
+
+.project-buttons1 button i{
+    font-size: 20px;
+    margin: 0;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.fa-node-js{
+    color: rgb(28, 215, 28);
+}
+.fa-react{
+    color: #26ffe3;
+}
+.fa-html5{
+    color: orange;
+}
+.fa-js{
+    color: yellow;
 }
 
 hr{
     width: 100%;
     margin-top: 20px;
     border: 0.7px solid #4e4e4e;
+}
+
+.full-stack, .react, .html-css, .javascript {
+    display: none; /* Hide all sections by default */
+    color: #fff;
+    margin: 20px;
+}
+
+/* Ensure the selected section is shown */
+.full-stack.selected, .react.selected, .html-css.selected, .javascript.selected {
+    display: block;
+}
+
+.login-page a img{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 100%;
+    border: 2px solid #4e4e4e;
+    transition: 0.2s;
+}
+
+.login-page a img:hover{
+    border-color: #26ffe3;
 }
