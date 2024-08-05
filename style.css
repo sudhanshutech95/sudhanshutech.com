@@ -1,0 +1,271 @@
+/* Add this to your style.css */
+body {
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #0d1224;
+}
+
+span {
+    color: #26ffe3;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d1224;
+    padding: 10px 30px;
+    color: #fff;
+    position: relative;
+    height: 40px;
+}
+
+.overlay{
+    height: 100vh;
+}
+
+.navbar .brand {
+    font-size: 1.5em;
+    font-weight: 500;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.navbar .nav-links li {
+    display: grid;
+}
+
+.navbar .nav-links i{
+    color: #26ffe3;
+    text-align: start;
+    position: absolute;
+    margin-left: -72px;
+    font-size: 60px;
+    display: block;
+}
+
+.navbar .nav-links a {
+    border-top: 1px solid #4e4e4e;
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 10px;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links .img {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar .nav-links .img p{
+    margin: 0;
+    background-color: #12173a;
+    border: 1px solid #4e4e4e;
+    border-radius: 30px;
+    padding: 6px 20px;
+}
+.a6 {
+    border-bottom: 1px solid #4e4e4e;
+}
+
+.navbar .toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar .toggle span {
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.navbar .toggle span:nth-child(1) {
+    top: 8px;
+}
+
+.navbar .toggle span:nth-child(2) {
+    top: 14px;
+}
+
+.navbar .toggle span:nth-child(3) {
+    top: 20px;
+}
+
+.navbar .toggle.active span:nth-child(1) {
+    top: 14px;
+    transform: rotate(45deg);
+}
+
+.navbar .toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar .toggle.active span:nth-child(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        background-color: #0d1224;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .navbar .nav-links.active {
+        max-height: 100vh; /* Adjust as needed */
+    }
+
+    .navbar .nav-links li {
+        text-align: center;
+    }
+
+    .navbar .toggle {
+        display: flex;
+    }
+
+    .navbar .brand.hidden {
+        opacity: 0;
+    }
+}
+
+.allProjects{
+    text-align: center;
+    color: #fff;
+}
+
+.allProjects h3{
+    font-weight: 500;
+}
+
+
+.project-buttons{
+    display: flex;
+    margin-left: 20px;
+    margin-right:20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-buttons1{
+    display: grid;
+    gap: 20px;
+}
+
+.project-buttons1 button{
+    padding: 12px 35px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    background-color: #0d1224;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #4e4e4e;
+}
+
+.project-buttons1 button.selected {
+    border: 2px solid #26ffe3;
+    color: #fff;
+}
+
+
+.project-buttons1 button i{
+    font-size: 20px;
+    margin: 0;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.fa-node-js{
+    color: rgb(28, 215, 28);
+}
+.fa-react{
+    color: #26ffe3;
+}
+.fa-html5{
+    color: orange;
+}
+.fa-js{
+    color: yellow;
+}
+
+.hr2{
+    width: 100%;
+    margin-top: 20px;
+    border: 0.7px solid #4e4e4e;
+}
+
+hr{
+    width: 100%;
+    margin: 0;
+    border: 0.7px solid #4e4e4e;
+}
+
+.full-stack, .react, .html-css, .javascript {
+    display: none; /* Hide all sections by default */
+    color: #fff;
+    margin: 20px;
+}
+
+/* Ensure the selected section is shown */
+.full-stack.selected, .react.selected, .html-css.selected, .javascript.selected {
+    display: block;
+}
+
+.login-page a img{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 100%;
+    border: 2px solid #4e4e4e;
+    transition: 0.4s;
+}
+
+.login-page a img:hover{
+    border-color: #26ffe3;
+}
+
+footer {
+    background: #0d1224;
+    text-align: center;
+    bottom: 0;
+    color: #8a8a8a;
+    margin: 0;
+    font-size: 14px;
+  }
