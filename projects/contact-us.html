@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Full Stack Web Development</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">Sudhu<span>Codes.</span></div>
+    </div>
+    <hr>
+
+
+    <div class="html-css project-section">
+        <h1>Contact-Us Project</h1>
+        <div class="login-page">
+            <p><img src="../images/Contact-Us.png" height="150px"></p>
+
+        </div>
+        <div class="source-code">
+            <p onclick="opencode()"><img src="/images/code_icon.9a2f1184.svg" alt="">Source Code</p>
+            <p onclick="downloadZip()"><img src="/images/project_assets.e50333c7.png" alt="">Download Zip File</p>
+            <p><img src="/images/project_assets.e50333c7.png" alt="">Assets</p>
+        </div>
+    </div>
+    <footer>Copyright &copy; 2024 - SudhuCodes</footer>
+    <script>
+        function opencode(){
+            window.location.href = '../SourceCode/contact-us-source-code.html';
+        }
+        function downloadZip() {
+            var link = document.createElement('a');
+            link.href = '../Zip/Contact-Us-Form.zip';
+            link.download = 'Contact-Us-Form.zip';
+            link.click();
+        }
+
+    </script>
+</body>
+</html>
