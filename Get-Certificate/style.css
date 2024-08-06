@@ -1,0 +1,323 @@
+body {
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #0d1224;
+}
+
+.projects{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+
+
+span {
+    color: #26ffe3;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d1224;
+    padding: 10px 30px;
+    color: #fff;
+    position: relative;
+    height: 40px;
+}
+
+.navbar .brand {
+    font-size: 1.5em;
+    font-weight: 500;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        max-height: 100vh;
+        overflow: hidden;
+        width: 100%;
+        background-color: #0d1224;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .navbar .nav-links.active {
+        max-height: 1px; /* Adjust as needed */
+    }
+
+    .navbar .nav-links li {
+        text-align: center;
+    }
+
+    .navbar .toggle {
+        display: flex;
+    }
+
+    .navbar .brand.hidden {
+        opacity: 0;
+    }
+}
+
+
+hr{
+    width: 100%;
+    margin: 0;
+    border: 0.7px solid #4e4e4e;
+}
+.container {
+    width: 90%;
+    color: #ffffff;
+    margin: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); /* Light white with transparency */
+    border: 2px solid rgba(255, 255, 255, 0.18); /* Slightly transparent border */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Blur effect */
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.container h2, .container p {
+    color: #ffffff; /* White color for better contrast */
+}
+
+.container input {
+    width: 80%;
+    height: 40px;
+    border: 1px solid #DADAF2;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    font-size: 17px;
+    padding: 0px 20px;
+    margin-bottom: 25px;
+    color: #ffffff; /* White text color */
+    transition: 0.2s ease;
+}
+
+.container input::placeholder {
+    color: #DADAF2; /* Light color for placeholder text */
+}
+
+.container input:focus {
+    border-color: #626cd6;
+}
+
+.container button {
+    color: #ffffff;
+    border: none;
+    border: 2px solid #4e4e4e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+}
+
+.container button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+}
+
+.container button:disabled {
+    background-color: rgba(255, 255, 255, 0.2); /* Light gray background */
+    color: #bbb; /* Light gray text */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    border-color: rgba(255, 255, 255, 0.2); /* Match border to background */
+}
+
+.question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* White color for better contrast */
+    word-wrap: break-word;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.options li {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #ffffff; /* White text color */
+}
+
+.options li:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
+}
+
+.options li.selected {
+    background: #007bff;
+    color: white;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    color: #fff;
+    border: none;
+    border: 2px solid #4e4e4e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #bbb;
+    cursor: not-allowed;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.results {
+    font-size: 1.2em;
+    color: #ffffff; /* White color for better contrast */
+    margin-top: 20px;
+}
+
+.results p {
+    margin: 10px 0;
+}
+
+.certificate-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.certificate-container button {
+    margin-top: 20px;
+}
+
+.certificate {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.18); /* Slightly transparent border */
+    padding: 20px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #000080 0%, #004d99 100%);
+    color: white;
+}
+
+.left-shape {
+    height: 100%;
+    width: 20px;
+    background-color: #626cd6; /* Colored background */
+    position: relative;
+}
+
+.left-shape .line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white; /* White line */
+    transform: translateX(-50%);
+}
+
+.certificate .logo h2 {
+    color: white;
+    margin: 0;
+}
+
+.certificate .logo h2 span {
+    color: aqua;
+}
+
+.certificate p {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.certificate-info {
+    margin-top: 10px;
+    padding: 10px;
+    padding-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Light white with transparency */
+    border: 2px solid rgba(255, 255, 255, 0.18); /* Slightly transparent border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 5px;
+}
+
+
+.watermark {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: -20px;
+    text-align: center;
+}
+.watermark .content{
+    display: grid;
+    justify-content: right;
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
+.watermark .content2{
+    display: grid;
+    justify-content: left;
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
+
+.start-container {
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .navigation-buttons button {
+        margin-bottom: 10px;
+    }
+
+    .results, .certificate-container {
+        margin-top: 10px;
+    }
+}
