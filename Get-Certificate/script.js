@@ -123,10 +123,18 @@ function startQuiz() {
 function loadQuestion() {
     const quizContainer = document.getElementById('quiz');
     const question = questions[currentQuestion];
+    const totalQuestions = questions.length;
+    const attemptedQuestions = selectedOptions.filter(option => option !== -1).length;
+
     quizContainer.innerHTML = `
+        <div class="question-info">
+            Question ${currentQuestion + 1} of ${totalQuestions} (Attempted: ${attemptedQuestions})
+        </div>
         <div class="question">${question.question}</div>
         <ul class="options">
-            ${question.options.map((option, index) => `<li class="${selectedOptions[currentQuestion] === index ? 'selected' : ''}" onclick="selectOption(${index})">${option}</li>`).join('')}
+            ${question.options.map((option, index) => 
+                `<li class="${selectedOptions[currentQuestion] === index ? 'selected' : ''}" onclick="selectOption(${index})">${option}</li>`
+            ).join('')}
         </ul>
     `;
 
@@ -134,6 +142,7 @@ function loadQuestion() {
     document.getElementById('nextBtn').style.display = currentQuestion === questions.length - 1 ? 'none' : 'inline-block';
     document.getElementById('submitBtn').style.display = currentQuestion === questions.length - 1 ? 'inline-block' : 'none';
 }
+
 
 function selectOption(index) {
     selectedOptions[currentQuestion] = index;
