@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudhuCodes - Quiz Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0d1224;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0d1224;
+            padding: 10px 30px;
+            color: #fff;
+            position: relative;
+            height: 40px;
+        }
+
+        .navbar .brand {
+            font-size: 1.5em;
+            font-weight: 500;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .navbar .brand span {
+            color: #26ffe3;
+        }
+
+        .projects {
+            display: grid;
+            text-align: center;
+        }
+        
+        .projects h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .quiz-item {
+            background-color: #1e2a48;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .quiz-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #26ffe3;
+        }
+        
+        .quiz-item button {
+            background-color: #26ffe3;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: #0d1224;
+            font-size: 1em;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .quiz-item button:hover {
+            background-color: #1a9b91;
+            transform: scale(1.05);
+        }
+
+        .explore{
+            margin: 10px;
+            padding: 10px;
+            display: block;
+            justify-content: right;
+            text-align: right;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .explorebtn{
+            margin-left: 10px;
+            text-align: left;
+        }
+
+        .explorebtn button{
+            color: #3c3c3c;
+            text-align: center;
+            border: none;
+            border: 2px solid #4e4e4e;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            background-color: #f4f4f4;
+        }
+
+        .explorebtn span2{
+            display: inline-block;
+            font-size: 20px;
+            transition: transform 0.3s;
+        }
+
+        .explorebtn button:hover span2 {
+            transform: rotate(90deg);
+        }
+
+        .explore img{
+            margin-top: 20px;
+            border-radius: 5px;
+            height: 250px;
+        }
+        
+        footer {
+            color: #8a8a8a;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="brand">Sudhu<span>Codes.</span></div>
+    </div>
+    <hr>
+    <div class="projects">
+        <div class="explore">
+            <div class="explorebtn">
+                <p>Get certified by completing the project & participating in the Quiz</p>
+                <button>Explore quizzes below <span2>&#8594;</span2></button>
+            </div>
+            <img src="certificate.png">
+        </div>
+        <div class="quiz-list">
+            <div class="quiz-item">
+                <h3>Basic HTML Quiz</h3>
+                <button onclick="startQuizhtml()">Start HTML Quiz</button>
+            </div>
+            <div class="quiz-item">
+                <h3>JavaScript Quiz</h3>
+                <button onclick="startQuizjs()">Start JavaScript Quiz</button>
+            </div>
+            <div class="quiz-item">
+                <h3>React Quiz</h3>
+                <button onclick="startQuizreact()">Start React Quiz</button>
+            </div>
+            <div class="quiz-item">
+                <h3>Full-Stack Quiz</h3>
+                <button onclick="startQuizfullstack()">Start Full-Stack Quiz</button>
+            </div>
+            <!-- Add more quizzes here -->
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 SudhuCodes. All rights reserved.
+    </footer>
+    <script>
+        function startQuizhtml() {
+            window.location.href = `certificate.html`; // Redirect to the respective quiz page
+        }
+        function startQuizjs() {
+            window.location.href = `comingsoon.html`; // Redirect to the respective quiz page
+        }
+        function startQuizreact() {
+            window.location.href = `comingsoon.html`; // Redirect to the respective quiz page
+        }
+        function startQuizfullstack() {
+            window.location.href = `comingsoon.html`; // Redirect to the respective quiz page
+        }
+    </script>
+</body>
+</html>
