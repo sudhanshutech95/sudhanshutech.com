@@ -26,7 +26,7 @@ span {
 }
 
 .overlay{
-    height: 100vh;
+    width: 100%;
 }
 
 .navbar .brand {
@@ -134,21 +134,28 @@ span {
     transform: rotate(-45deg);
 }
 
+/* Class to lock body scroll */
+body.scroll-locked {
+    overflow: hidden;
+}
+
 @media (max-width: 768px) {
     .navbar .nav-links {
-        flex-direction: column;
-        max-height: 0;
-        overflow: hidden;
-        width: 100%;
-        background-color: #0d1224;
-        position: absolute;
-        top: 60px;
+        position: fixed;
         left: 0;
-        z-index: 1;
+        top: 60px;
+        width: 100%;
+        height: 800px;
+        background-color: #0d1224;
+        flex-direction: column;
+        align-items: center;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease-in-out;
     }
 
     .navbar .nav-links.active {
-        max-height: 100vh; /* Adjust as needed */
+        transform: scaleX(1);
     }
 
     .navbar .nav-links li {
@@ -159,8 +166,26 @@ span {
         display: flex;
     }
 
+    .navbar .nav-links i{
+        color: #26ffe3;
+        text-align: start;
+        position: absolute;
+        margin-left: -72px;
+        font-size: 60px;
+        display: block;
+    }
+    
     .navbar .brand.hidden {
         opacity: 0;
+    }
+}
+
+@keyframes stretchedOut {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
     }
 }
 

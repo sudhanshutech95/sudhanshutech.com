@@ -1,10 +1,23 @@
+// Initially select the first button and show the corresponding section
+window.onload = function() {
+    selectButton('htmlCss');
+};
+
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     const toggle = document.querySelector('.toggle');
     const projectButtons = document.getElementById('project-buttons');
+    const body = document.body; // Add this line
 
     navLinks.classList.toggle('active');
     toggle.classList.toggle('active');
+
+    // Lock or unlock scrolling based on the navLinks state
+    if (navLinks.classList.contains('active')) {
+        body.classList.add('scroll-locked');
+    } else {
+        body.classList.remove('scroll-locked');
+    }
 
     // Show project buttons if the navbar is closed
     if (!navLinks.classList.contains('active')) {
@@ -40,9 +53,6 @@ function selectButton(buttonId) {
     sections[buttonId].style.display = 'block';
 }
 
-// Initially select the first button and show the corresponding section
-window.onload = function() {
-    selectButton('htmlCss');
-};
+
 
 
