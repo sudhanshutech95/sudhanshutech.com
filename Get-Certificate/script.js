@@ -165,11 +165,36 @@ function prevQuestion() {
 
 function showResults() {
     let score = 0;
+    let attempted = 0;
+    let incorrect = 0;
+    let skipped = 0;
+    const details = [];
+
     for (let i = 0; i < questions.length; i++) {
-        if (selectedOptions[i] === questions[i].correct) {
-            score++;
+        if (selectedOptions[i] !== -1) {
+            attempted++;
+            if (selectedOptions[i] === questions[i].correct) {
+                score++;
+                details.push({
+                    question: questions[i].question,
+                    status: 'correct'
+                });
+            } else {
+                incorrect++;
+                details.push({
+                    question: questions[i].question,
+                    status: 'incorrect'
+                });
+            }
+        } else {
+            skipped++;
+            details.push({
+                question: questions[i].question,
+                status: 'skipped'
+            });
         }
     }
+
     const percentage = (score / questions.length) * 100;
     let feedback = '';
     if (percentage < 50) {
@@ -185,10 +210,30 @@ function showResults() {
     document.querySelector('.navigation-buttons').style.display = 'none';
     document.getElementById('resultCertificateContainer').style.display = 'block';
     document.getElementById('results').innerHTML = `
-        <p>Your Score: ${score}/${questions.length}</p>
+        <p>Your Score: ${percentage.toFixed(2)}%</p>
         <p>${feedback}</p>
     `;
+
+    document.getElementById('attemptedQuestions').textContent = `Questions Attempted: ${attempted}`;
+    document.getElementById('incorrectAnswers').textContent = `Incorrect Answers: ${incorrect}`;
+    document.getElementById('skippedQuestions').textContent = `Skipped Questions: ${skipped}`;
+
+    // Store results in localStorage and redirect to details page
+    localStorage.setItem('quizResults', JSON.stringify({
+        percentage: percentage.toFixed(2),
+        attempted: attempted,
+        incorrect: incorrect,
+        skipped: skipped,
+        details: details
+    }));
+
+    document.getElementById('certificateContainer').style.display = 'block';
 }
+
+function toggleDetails() {
+    window.location.href = 'quiz-details.html'; // Redirect to the new page
+}
+
 
 function generateCertificate() {
     const userNameElement = document.getElementById('userName');
@@ -213,3 +258,4 @@ function downloadCertificate() {
         link.click();
     });
 }
+

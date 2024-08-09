@@ -4,16 +4,16 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     background: #0d1224;
 }
 
 .projects{
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 80%;
 }
 
 
@@ -76,7 +76,8 @@ hr{
     border: 0.7px solid #4e4e4e;
 }
 .container {
-    width: 90%;
+    display: block;
+    max-width: 600px;
     color: #ffffff;
     margin: 20px;
     text-align: center;
@@ -116,28 +117,6 @@ hr{
     border-color: #626cd6;
 }
 
-.container button {
-    color: #ffffff;
-    border: none;
-    border: 2px solid #4e4e4e;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-}
-
-.container button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
-}
-
-.container button:disabled {
-    background-color: rgba(255, 255, 255, 0.2); /* Light gray background */
-    color: #bbb; /* Light gray text */
-    cursor: not-allowed; /* Show not-allowed cursor */
-    border-color: rgba(255, 255, 255, 0.2); /* Match border to background */
-}
-
 .question {
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -169,31 +148,33 @@ hr{
     color: white;
 }
 
+
 .navigation-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-button {
-    color: #fff;
+.container2 button, .container button {
+    color: #ffffff;
     border: none;
     border: 2px solid #4e4e4e;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
 }
 
-button:hover {
-    background-color: #0056b3;
+.container button:hover, .container2 button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly more opaque on hover */
 }
 
-button:disabled {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #bbb;
-    cursor: not-allowed;
-    border-color: rgba(255, 255, 255, 0.2);
+.container button:disabled {
+    background-color: rgba(255, 255, 255, 0.2); /* Light gray background */
+    color: #bbb; /* Light gray text */
+    cursor: not-allowed; /* Show not-allowed cursor */
+    border-color: rgba(255, 255, 255, 0.2); /* Match border to background */
 }
 
 .results {
@@ -206,10 +187,9 @@ button:disabled {
     margin: 10px 0;
 }
 
-.certificate-container {
+.certificate-container{
     display: none;
-    text-align: center;
-    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .certificate-container button {
@@ -217,16 +197,39 @@ button:disabled {
 }
 
 .certificate {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto; /* Center the certificate */
+    padding: 25px;
+    padding-left: 40px; /* Add your desired padding */
+    padding-right: 40px; /* Add your desired padding */
     border: 2px solid rgba(255, 255, 255, 0.18); /* Slightly transparent border */
-    padding: 20px;
-    padding-bottom: 40px;
-    margin-top: 20px;
     background: linear-gradient(135deg, #000080 0%, #004d99 100%);
     color: white;
+    box-sizing: border-box; /* Ensure padding doesn't affect width calculation */
 }
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    width: 320px;
+    margin: 20px;
+    text-align: center;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Light white with transparency */
+    border: 2px solid rgba(255, 255, 255, 0.18); /* Slightly transparent border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Blur effect */
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+
 
 .left-shape {
     height: 100%;
@@ -301,11 +304,6 @@ button:disabled {
     margin-bottom: 20px;
 }
 
-.grid-container {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
-}
 
 @media (max-width: 600px) {
     .container {
