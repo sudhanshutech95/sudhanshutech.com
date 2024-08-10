@@ -11,79 +11,78 @@
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="loader-container" class="grid">
-        <span class="loader-5"></span>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
     </div>
-    <section class="content">
-        <div class="navbar">
-            <div class="brand">Sudhu<span>Codes.</span></div>
-            <div class="toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <div class="overlay">
-                <li>
-                    <a class="a1" href="index.html" onclick="showProjects()"><i id="navigator" class="fa-solid fa-square"></i><img src="images/projects.af28bec5.png" height="19px">All Projects <div class="img">
-                            <p>4</p>
-                            <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="a2" href="Get-Certificate/index.html"><i id="navigator1" class="fa-solid fa-square"></i><img src="images/get_certified.38ee65f4.png" height="24px">Get Certificate <div class="img">
-                            <p>1</p>
-                            <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
-                        </div>
-                    </a>
-                </li>
-                <li><a class="a3" href="#"><i id="navigator2" class="fa-solid fa-square"></i><img src="images/free_courses.65673ec2.png" height="19px">Courses<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-                <li><a class="a4" href="#"><i id="navigator3" class="fa-solid fa-square"></i><img src="images/code_icon.9a2f1184.svg" height="20px">Source Code<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-                <li><a class="a5" href="#"><i id="navigator4" class="fa-solid fa-square"></i><img src="images/project_assets.e50333c7.png" height="20px">Project Assets<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-                <li><a class="a6" href="#"><i id="navigator5" class="fa-solid fa-square"></i><img src="images/stock_pics.11d1f984.png" height="20px">Stock Images<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-            </div>
-            </ul>
-        </div>
-        <hr>
     
-        <div class="allProjects">
-            <h3>Projects</h3>
+    <div class="navbar">
+        <div class="brand">Sudhu<span>Codes.</span></div>
+        <div class="toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    
-        <div id="project-buttons" class="project-buttons">
-            <div class="project-buttons1">
-                <button id="htmlCss" onclick="selectButton('htmlCss')"><i class="fa-brands fa-html5"></i>HTML & CSS</button>
-                <button id="react" onclick="selectButton('react')"><i class="fa-brands fa-react"></i>React</button>
-            </div>
-            <div class="project-buttons1">
-                <button id="fullStack" onclick="selectButton('fullStack')"><i class="fa-brands fa-node-js"></i>Full Stack</button>
-                <button id="javaScript" onclick="selectButton('javaScript')"><i class="fa-brands fa-js"></i>JavaScript</button>
-            </div>
+        <ul class="nav-links">
+            <div class="overlay">
+            <li>
+                <a class="a1" href="index.html" onclick="showProjects()"><i id="navigator" class="fa-solid fa-square"></i><img src="images/projects.af28bec5.png" height="19px">All Projects <div class="img">
+                        <p>4</p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="a2" href="Get-Certificate/index.html"><i id="navigator1" class="fa-solid fa-square"></i><img src="images/get_certified.38ee65f4.png" height="24px">Get Certificate <div class="img">
+                        <p>1</p>
+                        <img src="images/arrow_icon.2a67aa4b.svg" height="22px">
+                    </div>
+                </a>
+            </li>
+            <li><a class="a3" href="#"><i id="navigator2" class="fa-solid fa-square"></i><img src="images/free_courses.65673ec2.png" height="19px">Courses<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
+            <li><a class="a4" href="#"><i id="navigator3" class="fa-solid fa-square"></i><img src="images/code_icon.9a2f1184.svg" height="20px">Source Code<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
+            <li><a class="a5" href="#"><i id="navigator4" class="fa-solid fa-square"></i><img src="images/project_assets.e50333c7.png" height="20px">Project Assets<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
+            <li><a class="a6" href="#"><i id="navigator5" class="fa-solid fa-square"></i><img src="images/stock_pics.11d1f984.png" height="20px">Stock Images<img class="img" src="images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
         </div>
-    
-        <hr class="hr2">
-    
-        <div class="full-stack project-section">
-            <h1>Full Stack Projects</h1>
+        </ul>
+    </div>
+    <hr>
+
+    <div class="allProjects">
+        <h3>Projects</h3>
+    </div>
+
+    <div id="project-buttons" class="project-buttons">
+        <div class="project-buttons1">
+            <button id="htmlCss" onclick="selectButton('htmlCss')"><i class="fa-brands fa-html5"></i>HTML & CSS</button>
+            <button id="react" onclick="selectButton('react')"><i class="fa-brands fa-react"></i>React</button>
         </div>
-        <div class="react project-section">
-            <h1>React Projects</h1>
+        <div class="project-buttons1">
+            <button id="fullStack" onclick="selectButton('fullStack')"><i class="fa-brands fa-node-js"></i>Full Stack</button>
+            <button id="javaScript" onclick="selectButton('javaScript')"><i class="fa-brands fa-js"></i>JavaScript</button>
         </div>
-        <div class="html-css project-section">
-            <h1>HTML & CSS Projects</h1>
-            <div class="login-page">
-                <a href="projects/login-project.html"><img src="images/Login-Page.png" height="150px"></a>
-                <a href="projects/e-commerce.html"><img src="images/E-commerce-Website.png" height="150px"></a>
-                <a href="projects/contact-us.html"><img src="images/Contact-Us.png" height="150px"></a>
-                <a href="projects/multi-step-form.html"><img src="images/Multi-Step-Form.png" height="150px"></a>
-            </div>
-            <footer>Copyright &copy; 2024 - SudhuCodes</footer>
+    </div>
+
+    <hr class="hr2">
+
+    <div class="full-stack project-section">
+        <h1>Full Stack Projects</h1>
+    </div>
+    <div class="react project-section">
+        <h1>React Projects</h1>
+    </div>
+    <div class="html-css project-section">
+        <h1>HTML & CSS Projects</h1>
+        <div class="login-page">
+            <a href="projects/login-project.html"><img src="images/Login-Page.png" height="150px"></a>
+            <a href="projects/e-commerce.html"><img src="images/E-commerce-Website.png" height="150px"></a>
+            <a href="projects/contact-us.html"><img src="images/Contact-Us.png" height="150px"></a>
+            <a href="projects/multi-step-form.html"><img src="images/Multi-Step-Form.png" height="150px"></a>
         </div>
-        <div class="javascript project-section">
-            <h1>JavaScript Projects</h1>
-        </div>
-    </section>
+        <footer>Copyright &copy; 2024 - SudhuCodes</footer>
+    </div>
+    <div class="javascript project-section">
+        <h1>JavaScript Projects</h1>
+    </div>
 
     <script src="script.js"></script>
 </body>
