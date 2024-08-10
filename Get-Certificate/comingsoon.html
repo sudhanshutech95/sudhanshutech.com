@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SudhuCodes - Coming Soon</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
@@ -15,27 +15,6 @@
             color: #fff;
             margin: 0;
             padding: 0;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #0d1224;
-            padding: 10px 30px;
-            color: #fff;
-            position: relative;
-            height: 40px;
-        }
-
-        .navbar .brand {
-            font-size: 1.5em;
-            font-weight: 500;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .navbar .brand span {
-            color: #26ffe3;
         }
 
         .projects {
@@ -79,6 +58,33 @@
 <body>
     <div class="navbar">
         <div class="brand">Sudhu<span>Codes.</span></div>
+        <div class="toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <div class="overlay">
+            <li>
+                <a class="a1" href="index.html" onclick="showProjects()"><i id="navigator" class="fa-solid fa-square"></i><img src="../images/projects.af28bec5.png" height="19px">All Projects <div class="img">
+                        <p>4</p>
+                        <img src="../images/arrow_icon.2a67aa4b.svg" height="22px">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="a2" href="Get-Certificate/index.html"><i id="navigator1" class="fa-solid fa-square"></i><img src="../images/get_certified.38ee65f4.png" height="24px">Get Certificate <div class="img">
+                        <p>1</p>
+                        <img src="../images/arrow_icon.2a67aa4b.svg" height="22px">
+                    </div>
+                </a>
+            </li>
+            <li><a class="a3" href="#"><i id="navigator2" class="fa-solid fa-square"></i><img src="../images/free_courses.65673ec2.png" height="19px">Courses<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
+            <li><a class="a4" href="#"><i id="navigator3" class="fa-solid fa-square"></i><img src="../images/code_icon.9a2f1184.svg" height="20px">Source Code<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
+            <li><a class="a5" href="#"><i id="navigator4" class="fa-solid fa-square"></i><img src="../images/project_assets.e50333c7.png" height="20px">Project Assets<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
+            <li><a class="a6" href="#"><i id="navigator5" class="fa-solid fa-square"></i><img src="../images/stock_pics.11d1f984.png" height="20px">Stock images<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
+        </div>
+        </ul>
     </div>
     <hr>
     <div class="projects">
@@ -90,5 +96,7 @@
     <footer>
         &copy; 2024 SudhuCodes. All rights reserved.
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

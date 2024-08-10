@@ -3,6 +3,11 @@ window.onload = function() {
     selectButton('htmlCss');
 };
 
+function goback() {
+    window.history.back();
+}
+
+
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     const toggle = document.querySelector('.toggle');
