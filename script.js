@@ -66,5 +66,12 @@ function selectButton(buttonId) {
 
 
 
+window.addEventListener('load', function() {
+            // Hide the loader
+            const loaderContainer = document.getElementById('loader-container');
+            loaderContainer.style.display = 'none';
 
-
+            // Show the content
+            const content = document.querySelector('.content');
+            content.style.visibility = 'visible';
+        });
