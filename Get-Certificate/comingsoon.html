@@ -43,6 +43,14 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            margin-top: 25%;
+        }
+
+        
+        @media (max-width: 600px) {
+            .projects{
+                margin-top: 50%;
+            }
         }
 
         .explore{
@@ -52,7 +60,9 @@
             justify-content: right;
             text-align: right;
             border-radius: 10px;
-            border: 2px solid rgba(255, 255, 255, 0.18);
+            background: rgba(21, 4, 255, 0.094);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 253, 80, 0.18);
         }
         
         footer {
@@ -80,13 +90,5 @@
     <footer>
         &copy; 2024 SudhuCodes. All rights reserved.
     </footer>
-    <script>
-        function startQuizhtml() {
-            window.location.href = `certificate.html`; // Redirect to the respective quiz page
-        }
-        function startQuizjs() {
-            window.location.href = `comingsoon.html`; // Redirect to the respective quiz page
-        }
-    </script>
 </body>
 </html>

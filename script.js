@@ -48,10 +48,17 @@ function selectButton(buttonId) {
 
     Object.keys(sections).forEach(section => {
         sections[section].style.display = 'none';
+        sections[section].classList.remove('fade-up'); // Remove animation class if present
     });
 
-    sections[buttonId].style.display = 'block';
+    // Display the selected section with fade-up animation
+    const selectedSection = sections[buttonId];
+    selectedSection.style.display = 'block';
+    setTimeout(() => {
+        selectedSection.classList.add('fade-up');
+    }, 10); // Add slight delay to trigger animation
 }
+
 
 
 

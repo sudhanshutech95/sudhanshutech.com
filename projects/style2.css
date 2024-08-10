@@ -133,14 +133,12 @@ hr{
     font-size: 20px;
 }
 footer {
-    width: 100%;
-    background: #0d1224;
-    padding: 25px 0;
-    left: 25%;
     color: #8a8a8a;
     text-align: center;
-    margin: 0;
-    margin-top: 80px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     font-size: 14px;
-  }
+}
 
