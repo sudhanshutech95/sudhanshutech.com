@@ -9,74 +9,28 @@ body {
     background: #0d1224;
 }
 
-span {
-    color: #26ffe3;
-    font-weight: 500;
-}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #0d1224;
-    padding: 10px 30px;
-    color: #fff;
-    position: relative;
-    height: 40px;
-}
-
-.navbar .brand {
-    font-size: 1.5em;
-    font-weight: 500;
-    transition: opacity 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
-    .navbar .nav-links {
-        flex-direction: column;
-        max-height: 100vh;
-        overflow: hidden;
-        width: 100%;
-        background-color: #0d1224;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 1;
-    }
-
-    .navbar .nav-links.active {
-        max-height: 1px; /* Adjust as needed */
-    }
-
-    .navbar .nav-links li {
-        text-align: center;
-    }
-
-    .navbar .toggle {
-        display: flex;
-    }
-
-    .navbar .brand.hidden {
-        opacity: 0;
-    }
-}
-
-
-hr{
-    width: 100%;
-    margin: 0;
-    border: 0.7px solid #4e4e4e;
-}
-
-.full-stack, .react, .html-css, .javascript {
+.full-stack, .react, .html-css2, .javascript {
     display: block; /* Hide all sections by default */
     color: #fff;
     margin: 20px;
 }
+.comingsoon{
+    padding: 10px;
+    color: #0d1224;
+    font-weight: bold;
+    background-color: #26ffe3;
+    font-size: 20px;
+}
 
 /* Ensure the selected section is shown */
-.full-stack.selected, .react.selected, .html-css.selected, .javascript.selected {
+.full-stack.selected, .react.selected, .html-css2.selected, .javascript.selected {
     display: block;
+}
+
+.html-css2 h1{
+    padding: 0;
+    margin: 0;
 }
 
 .login-page p img{
@@ -99,20 +53,61 @@ hr{
 }
 
 .source-code{
-    display: grid;
+    display: flex;
     justify-content: center;
+}
+
+
+  textarea{
+    padding: 10px;
+    width: 100%;
+    height: 300px;
+    outline: none;
+    font-size: 10px;
+    background-color: #0d1224;
+    color: #8a8a8a;
+  }
+
+.copybtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.copybtn button{
+    padding: 8px;
+    height: 40px;
+    outline: none;
+    align-items: center;
+    background-color: #0d1224;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #4e4e4e;
+    transition: 0.4s;
+}
+
+.copybtn button:hover{
+    border-color: #26ffe3;
+}
+
+.copybtn p{
+    font-weight: 400;
 }
 
 .source-code p{
     display: flex;
     justify-content: center;
+    -webkit-tap-highlight-color: transparent;
     gap: 10px;
     padding: 12px 20px;
     border: 2px solid #4e4e4e;
     border-radius: 30px;
     margin: 0;
     cursor: pointer;
-    margin-top: 30px;
+    margin-bottom: 10px;
     align-items: center;
     transition: 0.4s;
 }
@@ -125,21 +120,5 @@ hr{
     height: 18px;
 }
 
-.comingsoon{
-    padding: 10px;
-    color: #0d1224;
-    font-weight: bold;
-    background-color: #26ffe3;
-    font-size: 20px;
-}
-footer {
-    color: #8a8a8a;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-}
+
 

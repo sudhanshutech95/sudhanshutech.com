@@ -5,20 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SudhuCodes - Full Stack Web Development</title>
     <link rel="stylesheet" href="style2.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
+<style>
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    .navbar .brand{
+        margin-left: 25%;
+    }
+    footer {
+    color: #8a8a8a;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    bottom: 0;
+    max-width: 100%;
+    font-size: 14px;
+   }
+</style>
 <body>
     <div class="navbar">
+        <div onclick="goback()" class="arrowdiv">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
         <div class="brand">Sudhu<span>Codes.</span></div>
     </div>
     <hr>
 
 
-    <div class="html-css project-section">
+    <div class="html-css2 project-section">
         <h1>E-commerce Website</h1>
         <p class="comingsoon">Coming Soon</p>
         <div class="login-page">
@@ -26,23 +48,34 @@
 
         </div>
         <div class="source-code">
-            <p><img src="../images/code_icon.9a2f1184.svg" alt="">Source Code</p>
             <p><img src="../images/project_assets.e50333c7.png" alt="">Download Zip File</p>
-            <p><img src="../images/project_assets.e50333c7.png" alt="">Assets</p>
+        </div>
+        <div class="copybtn">
+            <p>HTML Code || index.html</p> <button onclick="copyText1()">Copy Code</button>
+        </div>
+        <div class="source-code">
+            <textarea id="htmlTextarea" readonly>
+                Coming Soon
+            </textarea>
+        </div>
+        <div class="copybtn">
+            <p>CSS Code || style.html</p> <button onclick="copyText1()">Copy Code</button>
+        </div>
+        <div class="source-code">
+            <textarea id="cssTextarea" readonly>
+                Coming Soon
+            </textarea>
         </div>
     </div>
     <footer>Copyright &copy; 2024 - SudhuCodes</footer>
     <script>
-        function opencode(){
-            window.location.href = '../SourceCode/e-commerce-source-code.html';
-        }
         function downloadZip() {
             var link = document.createElement('a');
             link.href = '../Zip/E-commerse-Red-Store.zip';
             link.download = 'E-commerse-Red-Store.zip';
             link.click();
         }
-
     </script>
+    <script src="../script.js"></script>
 </body>
 </html>
