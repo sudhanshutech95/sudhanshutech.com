@@ -27,9 +27,12 @@ navLinkItems.forEach(link => {
         const navLinks = document.querySelector('.nav-links');
         const toggle = document.querySelector('.toggle');
 
-        navLinks.classList.remove('active');
-        toggle.classList.remove('active');
-        document.body.classList.remove('scroll-locked');
+        // Add a small delay to prevent flickering
+        setTimeout(() => {
+            navLinks.classList.remove('active');
+            toggle.classList.remove('active');
+            document.body.classList.remove('scroll-locked');
+        }, 200); // 200ms delay before closing the navbar
     });
 });
 
