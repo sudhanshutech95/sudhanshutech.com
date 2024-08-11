@@ -1,22 +1,3 @@
-window.onload = function() {
-    selectButton('htmlCss');
-
-    // Close the navbar if it's open
-    const navLinks = document.querySelector('.nav-links');
-    const toggle = document.querySelector('.toggle');
-    const body = document.body;
-
-    if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        toggle.classList.remove('active');
-        body.classList.remove('scroll-locked');
-    }
-};
-
-function goback() {
-    window.history.back();
-}
-
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     const toggle = document.querySelector('.toggle');
@@ -37,6 +18,27 @@ function toggleMenu() {
     if (!navLinks.classList.contains('active')) {
         projectButtons.style.display = 'flex';
     }
+}
+
+// Close the navbar when any link is clicked
+const navLinkItems = document.querySelectorAll('.nav-links a');
+navLinkItems.forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        const toggle = document.querySelector('.toggle');
+
+        navLinks.classList.remove('active');
+        toggle.classList.remove('active');
+        document.body.classList.remove('scroll-locked');
+    });
+});
+
+window.onload = function() {
+    selectButton('htmlCss');
+};
+
+function goback() {
+    window.history.back();
 }
 
 function showProjects() {
@@ -61,18 +63,17 @@ function selectButton(buttonId) {
 
     Object.keys(sections).forEach(section => {
         sections[section].style.display = 'none';
-        sections[section].classList.remove('fade-up'); // Remove animation class if present
+        sections[section].classList.remove('fade-up');
     });
 
-    // Display the selected section with fade-up animation
     const selectedSection = sections[buttonId];
     selectedSection.style.display = 'block';
     setTimeout(() => {
         selectedSection.classList.add('fade-up');
-    }, 10); // Add slight delay to trigger animation
+    }, 10);
 }
 
 window.addEventListener('load', function() {
     const loaderWrapper = document.getElementById('loader-wrapper');
-    loaderWrapper.style.display = 'none'; // Hide the loader
+    loaderWrapper.style.display = 'none';
 });
