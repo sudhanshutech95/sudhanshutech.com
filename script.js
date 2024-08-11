@@ -1,18 +1,27 @@
-// Initially select the first button and show the corresponding section
 window.onload = function() {
     selectButton('htmlCss');
+
+    // Close the navbar if it's open
+    const navLinks = document.querySelector('.nav-links');
+    const toggle = document.querySelector('.toggle');
+    const body = document.body;
+
+    if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        toggle.classList.remove('active');
+        body.classList.remove('scroll-locked');
+    }
 };
 
 function goback() {
     window.history.back();
 }
 
-
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     const toggle = document.querySelector('.toggle');
     const projectButtons = document.getElementById('project-buttons');
-    const body = document.body; // Add this line
+    const body = document.body;
 
     navLinks.classList.toggle('active');
     toggle.classList.toggle('active');
@@ -32,7 +41,6 @@ function toggleMenu() {
 
 function showProjects() {
     const navLinks = document.querySelector('.nav-links');
-
     const projectButtons = document.getElementById('project-buttons');
     projectButtons.style.display = 'flex';
 }
