@@ -14,12 +14,21 @@ span {
     font-weight: 500;
 }
 
-.arrowdiv{
+.arrowdiv {
     padding-left: 10px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
     padding-right: 10px;
     font-size: 22px;
     margin-left: -10px;
+    transition: all 0.2s ease;
 }
+
+.arrowdiv:active {
+    color: #ddd; /* Change background color on click */
+    transform: scale(0.90); /* Slightly reduce the size */
+}
+
 
 .navbar {
     display: flex;
@@ -207,6 +216,7 @@ body.scroll-locked {
 }
 
 
+
 .project-buttons{
     display: flex;
     margin-left: 20px;
@@ -306,12 +316,12 @@ hr{
 footer {
     color: #8a8a8a;
     text-align: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    bottom: 0;
-    max-width: 100%;
+    padding: 20px;
+    margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
+    background-color: #0d1224; /* Footer ka background set kare */
+    width: 100%; /* Footer ko full width dena */
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 /* Loader styles */
