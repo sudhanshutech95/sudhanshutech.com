@@ -20,20 +20,37 @@ function toggleMenu() {
     }
 }
 
-// Close the navbar when any link is clicked
+// Close the navbar with a delay before navigating
 const navLinkItems = document.querySelectorAll('.nav-links a');
 navLinkItems.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the default navigation
+
         const navLinks = document.querySelector('.nav-links');
         const toggle = document.querySelector('.toggle');
-
-        // Add a small delay to prevent flickering
+        
+        // Add a small delay before navigating
         setTimeout(() => {
             navLinks.classList.remove('active');
             toggle.classList.remove('active');
             document.body.classList.remove('scroll-locked');
-        }, 200); // 200ms delay before closing the navbar
+
+            // Navigate to the href of the clicked link
+            window.location.href = link.href;
+        }, 2000); // 2 seconds delay before navigating
     });
+});
+
+window.addEventListener('popstate', () => {
+    const navLinks = document.querySelector('.nav-links');
+    const toggle = document.querySelector('.toggle');
+
+    // Ensure the navbar is closed
+    if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        toggle.classList.remove('active');
+        document.body.classList.remove('scroll-locked');
+    }
 });
 
 window.onload = function() {
