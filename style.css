@@ -286,6 +286,7 @@ hr{
     display: none; /* Hide all sections by default */
     color: #fff;
     margin: 20px;
+    margin-bottom: 0;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -308,6 +309,12 @@ hr{
     border: 2px solid #4e4e4e;
     transition: 0.4s;
 }
+
+/* Last image ka margin-bottom 0 karna */
+.login-page a:last-child img {
+    margin-bottom: 0;
+}
+
 
 .login-page a img:hover{
     border-color: #26ffe3;
