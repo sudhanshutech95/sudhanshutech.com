@@ -54,6 +54,7 @@ span {
     font-size: 1.5em;
     font-weight: 500;
     transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .navbar .nav-links {

@@ -74,3 +74,8 @@ window.addEventListener('pageshow', function(event) {
         window.location.reload();
     }
 });
+
+document.querySelector('.navbar .brand').addEventListener('click', function() {
+    window.location.href = '../index.html';
+});
+
