@@ -11,6 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
 </head>
+<style>
+        .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #4e4e4e;
+    position: sticky;
+    top: 0;
+    background-color: #0d1224;
+    padding: 10px;
+    z-index: 1000; /* Keeps the navbar on top of other content */
+    }
+
+    .navbar .arrowdiv {
+        position: absolute;
+        left: 25px;
+        cursor: pointer;
+    }
+</style>
 <body>
     <div id="loader-wrapper">
         <div id="loader"></div>
@@ -21,35 +40,7 @@
             <i class="fa-solid fa-arrow-left"></i>
         </div>
         <div class="brand">Sudhu<span>Codes.</span></div>
-        <div class="toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links">
-            <div class="overlay">
-            <li>
-                <a class="a1" href="../index.html" onclick="showProjects()"><i id="navigator" class="fa-solid fa-square"></i><img src="../images/projects.af28bec5.png" height="19px">All Projects <div class="img">
-                        <p>4</p>
-                        <img src="../images/arrow_icon.2a67aa4b.svg" height="22px">
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="a2" href="../Get-Certificate/index.html"><i id="navigator1" class="fa-solid fa-square"></i><img src="../images/get_certified.38ee65f4.png" height="24px">Get Certificate <div class="img">
-                        <p>1</p>
-                        <img src="../images/arrow_icon.2a67aa4b.svg" height="22px">
-                    </div>
-                </a>
-            </li>
-            <li><a class="a3" href="#"><i id="navigator2" class="fa-solid fa-square"></i><img src="../images/free_courses.65673ec2.png" height="19px">Courses<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-            <li><a class="a4" href="#"><i id="navigator3" class="fa-solid fa-square"></i><img src="../images/code_icon.9a2f1184.svg" height="20px">Source Code<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-            <li><a class="a5" href="#"><i id="navigator4" class="fa-solid fa-square"></i><img src="../images/project_assets.e50333c7.png" height="20px">Project Assets<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-            <li><a class="a6" href="#"><i id="navigator5" class="fa-solid fa-square"></i><img src="../images/stock_pics.11d1f984.png" height="20px">Stock images<img class="img" src="../images/arrow_icon.2a67aa4b.svg" height="22px"></a></li>
-        </div>
-        </ul>
     </div>
-    <hr>
     <div class="projects">
         <div class="container start-container">
             <h2>Welcome to the HTML Quiz</h2>
@@ -96,7 +87,16 @@
         
     
     </div>
-    <footer>Copyright &copy; 2024 - SudhuCodes</footer>
+    <footer>
+        <div class="socialLinks">
+            <a href="https://www.youtube.com/@sudhucodes" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/sudhucodes/" target="_blank">Instagram</a>
+            <a href="https://github.com/sudhucodes" target="_blank">Github</a>
+            <a href="https://t.me/sudhucodes" target="_blank">Telegram</a>
+            <a href="mailto:sudhuteam@gmail.com?subject=Hello%20SudhuCodes&body=Hii,%20SudhuCodes" target="_blank">Contact</a>
+        </div>
+        <p>Copyright &copy; 2024 SudhuCodes - All rights reserved.</p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
     <script src="../script.js"></script>

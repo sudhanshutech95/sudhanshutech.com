@@ -166,6 +166,7 @@ body {
   #htmlcode, #csscode {
     width: 320px;
     height: 320px;
+    font-size: 10px;
     resize: none;
     background-color: rgb(73, 70, 92);
     border-radius: 5px;

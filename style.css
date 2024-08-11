@@ -34,12 +34,16 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #4e4e4e;
     background-color: #0d1224;
     padding: 10px 30px;
     color: #fff;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Optional: Ensure it stays on top of other elements */
     height: 40px;
 }
+
 
 .overlay{
     width: 100%;
@@ -235,6 +239,7 @@ body.scroll-locked {
     outline: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #0d1224;
     border: none;
     border-radius: 30px;
@@ -276,11 +281,6 @@ body.scroll-locked {
     border: 0.7px solid #4e4e4e;
 }
 
-hr{
-    width: 100%;
-    margin: 0;
-    border: 0.7px solid #4e4e4e;
-}
 
 .full-stack, .react, .html-css, .javascript {
     display: none; /* Hide all sections by default */
@@ -310,9 +310,8 @@ hr{
     transition: 0.4s;
 }
 
-/* Last image ka margin-bottom 0 karna */
 .login-page a:last-child img {
-    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 
 
@@ -321,14 +320,34 @@ hr{
 }
 
 footer {
-    color: #8a8a8a;
+    color: #d1d5db;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     margin-top: auto; /* Yeh ensure karega ki footer last me rahe */
     background-color: #0d1224; /* Footer ka background set kare */
     width: 100%; /* Footer ko full width dena */
-    font-size: 14px;
+    font-size: 12px;
+    display: grid;
+    gap: 10px;
     box-sizing: border-box;
+    border-top: 1px solid #4e4e4e;
+}
+
+footer p{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+.socialLinks a{
+    color: #d1d5db;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.socialLinks a:hover{
+    color: #26ffe3;
 }
 
 /* Loader styles */
