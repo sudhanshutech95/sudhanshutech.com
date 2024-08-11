@@ -58,39 +58,10 @@ body {
 }
 
 
-  textarea{
-    padding: 10px;
-    width: 100%;
-    height: 300px;
-    outline: none;
-    font-size: 10px;
-    background-color: #0d1224;
-    color: #8a8a8a;
-  }
-
 .copybtn{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-}
-
-.copybtn button{
-    padding: 8px;
-    height: 40px;
-    outline: none;
-    align-items: center;
-    background-color: #0d1224;
-    border: none;
-    -webkit-tap-highlight-color: transparent;
-    color: #fff;
-    cursor: pointer;
-    border: 2px solid #4e4e4e;
-    transition: 0.4s;
-}
-
-.copybtn button:hover{
-    border-color: #26ffe3;
 }
 
 .copybtn p{
@@ -107,7 +78,6 @@ body {
     border-radius: 30px;
     margin: 0;
     cursor: pointer;
-    margin-bottom: 10px;
     align-items: center;
     transition: 0.4s;
 }
@@ -122,3 +92,226 @@ body {
 
 
 
+/* From Uiverse.io by Bastiennnn */ 
+.card {
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #24233b;
+    border-radius: 8px;
+    margin-top: 20px;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .top {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .circle {
+    padding: 0 4px;
+  }
+  
+  .circle2 {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 5px;
+  }
+  
+  .red {
+    background-color: #ff605c;
+  }
+  
+  .yellow {
+    background-color: #ffbd44;
+  }
+  
+  .green {
+    background-color: #00ca4e;
+  }
+  
+  .header {
+    margin: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  .title{
+    display: flex;
+    align-items: center;
+    gap:50px;
+  }
+
+  .title button{
+    margin-left: 60px;
+  }
+
+  #title2 {
+    color: white;
+    padding-left: 50px;
+    font-size: 15px;
+  }
+
+  .code-container {
+    text-align: center;
+    overflow: auto;
+  }
+  
+
+  #htmlcode, #csscode {
+    width: 320px;
+    height: 320px;
+    resize: none;
+    background-color: rgb(73, 70, 92);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+  }
+
+  #htmlcode:focus, #csscode:focus {
+    outline: none !important;
+  }
+
+
+
+/* From Uiverse.io by axy1976 */ 
+/* tooltip settings 👇 */
+
+.btn-copy {
+    /* button */
+    --button-bg: #353434;
+    --button-hover-bg: #464646;
+    --button-text-color: #cccccc;
+    --button-hover-text-color: #8bb9fe;
+    --button-border-radius: 10px;
+    --button-diameter: 36px;
+    --button-outline-width: 1px;
+    --button-outline-color: rgb(141, 141, 141);
+    /* tooltip */
+    --tooltip-bg: #f4f3f3;
+    --toolptip-border-radius: 4px;
+    --tooltip-font-family: Menlo, Roboto Mono, monospace;
+    /* 👆 this field should not be empty */
+    --tooltip-font-size: 12px;
+    /* 👆 this field should not be empty */
+    --tootip-text-color: rgb(50, 50, 50);
+    --tooltip-padding-x: 7px;
+    --tooltip-padding-y: 7px;
+    --tooltip-offset: 8px;
+    /* --tooltip-transition-duration: 0.3s; */
+    /* 👆 if you need a transition, 
+    just remove the comment,
+    but I didn't like the transition :| */
+  }
+  
+  .btn-copy {
+    box-sizing: border-box;
+    width: var(--button-diameter);
+    height: var(--button-diameter);
+    border-radius: var(--button-border-radius);
+    background-color: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+  }
+  
+  .btn-copy > .cp-tooltip {
+    position: absolute;
+    opacity: 0;
+    visibility: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: pre-wrap; /* This allows line breaks */
+    word-wrap: break-word; /* Break long words if necessary */
+    width: 80px;
+    font: var(--tooltip-font-size) var(--tooltip-font-family);
+    color: var(--tootip-text-color);
+    background: var(--tooltip-bg);
+    padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+    border-radius: var(--toolptip-border-radius);
+    pointer-events: none;
+    transition: all var(--tooltip-transition-duration)
+      cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .btn-copy > .cp-tooltip::before {
+    content: attr(data-text-initial);
+  }
+  
+  .btn-copy > .cp-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+    width: var(--tooltip-padding-y);
+    height: var(--tooltip-padding-y);
+    background: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -999;
+    pointer-events: none;
+  }
+  
+  .btn-copy svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .cp-check-mark {
+    display: none;
+  }
+  
+  /* actions */
+  
+  .btn-copy:hover .cp-tooltip,
+  .btn-copy:focus:not(:focus-visible) .cp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: calc((100% + var(--tooltip-offset)) * -1);
+  }
+  
+  .btn-copy:focus:not(:focus-visible) .cp-tooltip::before {
+    content: attr(data-text-end);
+  }
+  
+  .btn-copy:focus:not(:focus-visible) .cp-clipboard {
+    display: none;
+  }
+  
+  .btn-copy:focus:not(:focus-visible) .cp-check-mark {
+    display: block;
+  }
+  
+  .btn-copy:hover,
+  .btn-copy:focus {
+    background-color: var(--button-hover-bg);
+  }
+  
+  .btn-copy:active {
+    outline: var(--button-outline-width) solid var(--button-outline-color);
+  }
+  
+  .btn-copy:hover svg {
+    color: var(--button-hover-text-color);
+  }
+  .btn-copy.copied .cp-clipboard {
+    display: none;
+}
+
+.btn-copy.copied .cp-check-mark {
+    display: block;
+}
+
+.btn-copy.copied .cp-tooltip::before {
+    content: attr(data-text-end);
+}

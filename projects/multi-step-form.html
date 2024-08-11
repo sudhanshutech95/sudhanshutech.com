@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SudhuCodes - Full Stack Web Development</title>
-    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/c58add7555.js" crossorigin="anonymous"></script>
@@ -43,22 +43,87 @@
     </div>
     <hr>
 
-
     <div class="html-css2 project-section">
         <h1>Multi-Step-Form Project</h1>
         <div class="login-page">
             <p><img src="../images/Multi-Step-Form.png" height="150px"></p>
-
         </div>
         <div class="source-code">
             <p onclick="downloadZip()"><img src="../images/project_assets.e50333c7.png" alt="">Download Zip File</p>
         </div>
-        <div class="copybtn">
-            <p>HTML Code || index.html</p> <button onclick="copyText1()">Copy Code</button>
-        </div>
-        <div class="source-code">
-            <textarea id="htmlTextarea" readonly>
-                <!DOCTYPE html>
+
+        <!-- Only one card section with a copy button -->
+        <div class="card">
+            <div class="header">
+              <div class="top">
+                <div class="circle">
+                  <span class="red circle2"></span>
+                </div>
+                <div class="circle">
+                  <span class="yellow circle2"></span>
+                </div>
+                <div class="circle">
+                  <span class="green circle2"></span>
+                </div>
+                <div class="title">
+                  <p id="title2">index.html</p>
+                  <button onclick="copyhtmlcode()" class="btn-copy html-btn-copy">
+                    <span
+                      data-text-end="Copied!"
+                      data-text-initial="Copy to clipboard"
+                      class="cp-tooltip"
+                    ></span>
+                    <span>
+                      <svg
+                        xml:space="preserve"
+                        style="enable-background:new 0 0 512 512"
+                        viewBox="0 0 6.35 6.35"
+                        y="0"
+                        x="0"
+                        height="20"
+                        width="20"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="cp-clipboard"
+                      >
+                        <g>
+                          <path
+                            fill="currentColor"
+                            d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                          ></path>
+                        </g>
+                      </svg>
+                      <svg
+                        xml:space="preserve"
+                        style="enable-background:new 0 0 512 512"
+                        viewBox="0 0 24 24"
+                        y="0"
+                        x="0"
+                        height="18"
+                        width="18"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="cp-check-mark"
+                      >
+                        <g>
+                          <path
+                            data-original="#000000"
+                            fill="currentColor"
+                            d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="code-container">
+              <textarea class="area" id="htmlcode" name="code"
+readonly="">
+<!DOCTYPE html2>
 <!-- ---------Code With SudhuCodes---------- -->
 <html lang="en">
 <head>
@@ -67,7 +132,7 @@
     <title>Multi-Step-Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body2>
 
     <div class="container">
         <form id="Form1">
@@ -158,169 +223,249 @@
 
         </script>
     
-</body>
-</html>
-            </textarea>
-        </div>
-        <div class="copybtn">
-            <p>CSS Code || style.css</p> <button onclick="copyText2()">Copy Code</button>
+</body2>
+</html2>
+</textarea>
+            </div>
         </div>
         <div class="source-code">
-            <textarea id="cssTextarea" readonly>
-                *{
-                    margin: 0;
-                    padding: 0;
-                    font-family: sans-serif;
-                }
-                
-                body{
-                    background: url(65116d11c370dd7b593e563b_Background.png);
-                }
-                
-                .container{
-                    width: 360px;
-                    height: 400px;
-                    margin: 8% auto;
-                    background: #fff;
-                    border-radius: 5px;
-                    position: relative;
-                    overflow: hidden;
-                }
-                
-                h3{
-                    text-align: center;
-                    margin-bottom: 40px;
-                    color: #777;
-                }
-                
-                .container form{
-                    width: 280px;
-                    position: absolute;
-                    top: 100px;
-                    left: 40px;
-                    transition: 0.5s;
-                }
-                
-                form input{
-                    width: 100%;
-                    padding: 10px 5px;
-                    margin: 5px 0px;
-                    border: 0;
-                    border-bottom: 1px solid #999;
-                    outline: none;
-                    background: transparent;
-                }
-                
-                ::placeholder{
-                    color: #777;
-                }
-                
-                .btn-box{
-                    width: 100%;
-                    margin: 30px auto;
-                    text-align: center;
-                }
-                
-                form button{
-                    width: 110px;
-                    height: 35px;
-                    margin: 0 10px;
-                    background: linear-gradient(to right, #ff105f, #ffad06);
-                    border-radius: 30px;
-                    border: 0;
-                    outline: none;
-                    color: #fff;
-                    cursor: pointer;
-                }
-                
-                #Form2{
-                    left: 450px;
-                }
-                
-                #Form3{
-                    left: 450px;
-                }
-                
-                .step-row{
-                    width: 360px;
-                    height: 40px;
-                    margin: 0 auto;
-                    display: flex;
-                    align-items: center;
-                    box-shadow: 0 -1px 5px #000;
-                    position: relative;
-                }
-                
-                .step-col{
-                    width: 120px;
-                    text-align: center;
-                    color: #333;
-                    position: relative;
-                }
-                
-                #progress{
-                    position: absolute;
-                    height: 100%;
-                    width: 120px;
-                    background: linear-gradient(to right, #ff105f, #ffad06);
-                    transition: 1s;
-                }
-                
-                #progress::after{
-                    content: '';
-                    height: 0;
-                    width: 0;
-                    border-top: 20px solid transparent;
-                    border-bottom: 20px solid transparent;
-                    position: absolute;
-                    right: -20px;
-                    top: 0;
-                    border-left: 20px solid #ffad06;
-                }
-            </textarea>
+            
         </div>
+        <!-- Another card section for CSS with a copy button -->
+        <div class="card">
+            <div class="header">
+              <div class="top">
+                <div class="circle">
+                  <span class="red circle2"></span>
+                </div>
+                <div class="circle">
+                  <span class="yellow circle2"></span>
+                </div>
+                <div class="circle">
+                  <span class="green circle2"></span>
+                </div>
+                <div class="title">
+                  <p id="title2">style.css</p>
+                  <button onclick="copycsscode()" class="btn-copy css-btn-copy">
+                    <span
+                      data-text-end="Copied!"
+                      data-text-initial="Copy to clipboard"
+                      class="cp-tooltip"
+                    ></span>
+                    <span>
+                      <svg
+                        xml:space="preserve"
+                        style="enable-background:new 0 0 512 512"
+                        viewBox="0 0 6.35 6.35"
+                        y="0"
+                        x="0"
+                        height="20"
+                        width="20"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="cp-clipboard"
+                      >
+                        <g>
+                          <path
+                            fill="currentColor"
+                            d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z"
+                          ></path>
+                        </g>
+                      </svg>
+                      <svg
+                        xml:space="preserve"
+                        style="enable-background:new 0 0 512 512"
+                        viewBox="0 0 24 24"
+                        y="0"
+                        x="0"
+                        height="18"
+                        width="18"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="cp-check-mark"
+                      >
+                        <g>
+                          <path
+                            data-original="#000000"
+                            fill="currentColor"
+                            d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z"
+                          ></path>
+                        </g>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="code-container">
+              <textarea class="area" id="csscode" name="code"
+readonly="">
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: url(65116d11c370dd7b593e563b_Background.png);
+}
+
+.container{
+    width: 360px;
+    height: 400px;
+    margin: 8% auto;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 40px;
+    color: #777;
+}
+
+.container form{
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    transition: 0.5s;
+}
+
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px 0px;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+::placeholder{
+    color: #777;
+}
+
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#Form2{
+    left: 450px;
+}
+
+#Form3{
+    left: 450px;
+}
+
+.step-row{
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px #000;
+    position: relative;
+}
+
+.step-col{
+    width: 120px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    transition: 1s;
+}
+
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #ffad06;
+}
+</textarea>
+            </div>
+        </div>
+
     </div>
     <footer>Copyright &copy; 2024 - SudhuCodes</footer>
+    <script src="../script.js"></script>
     <script>
         function downloadZip() {
             var link = document.createElement('a');
-            link.href = '../Zip/multi-step-Form.zip';
-            link.download = 'multi-step-Form.zip';
+            link.href = '../Zip/Multi-Step-Form.zip';
+            link.download = 'Multi-Step-Form.zip';
             link.click();
         }
-        function copyText1() {
-            // Get the text field
-            var textArea = document.getElementById("htmlTextarea");
 
-            // Select the text field
-            textArea.select();
-            textArea.setSelectionRange(0, 99999); // For mobile devices
+        function goback() {
+        window.history.back();
+        }
 
-            // Copy the text inside the text field
-            document.execCommand("copy");
+        function copyhtmlcode() {
+        // Get the text field
+        var textArea = document.getElementById("htmlcode");
 
-            // Alert the copied text (Optional)
-            alert("Copied the HTML Code: ");
+        // Select the text field
+        textArea.select();
+        textArea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        document.execCommand("copy");
+
+        // Change the button state to show the checkmark
+        var copyButton = document.querySelector('.html-btn-copy');
+        copyButton.classList.add('copied');
+        
         }
 
 
-        function copyText2() {
-            // Get the text field
-            var textArea = document.getElementById("cssTextarea");
 
-            // Select the text field
-            textArea.select();
-            textArea.setSelectionRange(0, 99999); // For mobile devices
+        function copycsscode() {
+        // Get the text field
+        var textArea = document.getElementById("csscode");
 
-            // Copy the text inside the text field
-            document.execCommand("copy");
+        // Select the text field
+        textArea.select();
+        textArea.setSelectionRange(0, 99999); // For mobile devices
 
-            // Alert the copied text (Optional)
-            alert("Copied the CSS Code: ");
+        // Copy the text inside the text field
+        document.execCommand("copy");
+
+        // Change the button state to show the checkmark
+        var copyButton = document.querySelector('.css-btn-copy');
+        copyButton.classList.add('copied');
+
         }
-
     </script>
-
-    <script src="../script.js"></script>
 </body>
 </html>
