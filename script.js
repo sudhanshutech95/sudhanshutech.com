@@ -1,8 +1,18 @@
+// Initially select the first button and show the corresponding section
+window.onload = function() {
+    selectButton('htmlCss');
+};
+
+function goback() {
+    window.history.back();
+}
+
+
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
     const toggle = document.querySelector('.toggle');
     const projectButtons = document.getElementById('project-buttons');
-    const body = document.body;
+    const body = document.body; // Add this line
 
     navLinks.classList.toggle('active');
     toggle.classList.toggle('active');
@@ -20,32 +30,9 @@ function toggleMenu() {
     }
 }
 
-// Close the navbar when any link is clicked
-const navLinkItems = document.querySelectorAll('.nav-links a');
-navLinkItems.forEach(link => {
-    link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        const toggle = document.querySelector('.toggle');
-
-        // Add a small delay to prevent flickering
-        setTimeout(() => {
-            navLinks.classList.remove('active');
-            toggle.classList.remove('active');
-            document.body.classList.remove('scroll-locked');
-        }, 200); // 200ms delay before closing the navbar
-    });
-});
-
-window.onload = function() {
-    selectButton('htmlCss');
-};
-
-function goback() {
-    window.history.back();
-}
-
 function showProjects() {
     const navLinks = document.querySelector('.nav-links');
+
     const projectButtons = document.getElementById('project-buttons');
     projectButtons.style.display = 'flex';
 }
@@ -66,17 +53,24 @@ function selectButton(buttonId) {
 
     Object.keys(sections).forEach(section => {
         sections[section].style.display = 'none';
-        sections[section].classList.remove('fade-up');
+        sections[section].classList.remove('fade-up'); // Remove animation class if present
     });
 
+    // Display the selected section with fade-up animation
     const selectedSection = sections[buttonId];
     selectedSection.style.display = 'block';
     setTimeout(() => {
         selectedSection.classList.add('fade-up');
-    }, 10);
+    }, 10); // Add slight delay to trigger animation
 }
 
 window.addEventListener('load', function() {
     const loaderWrapper = document.getElementById('loader-wrapper');
-    loaderWrapper.style.display = 'none';
+    loaderWrapper.style.display = 'none'; // Hide the loader
+});
+
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        window.location.reload();
+    }
 });
